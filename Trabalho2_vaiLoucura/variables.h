@@ -25,40 +25,42 @@
 #define BLOCKED 4
 #define EXIT 5
 
+typedef struct _io {
 
-typedef struct _io{
+  char type[100]; /* Type of IO: "disk", "printer" or "mag_tape" */
+  int time_exec; /* Time that the IO takes to be fully performed */
+  int queue_priority; /* Indicates which priority queue a process that finishes doing this type of IO goes to */
 
-char type[100]; /* Type of IO: "disk", "printer" or "mag_tape" */
-int time_exec;/* Time that the IO takes to be fully performed */
-int queue_priority;/* Indicates which priority queue a process that finishes doing this type of IO goes to */
+}
+IO;
 
-} IO;
+typedef struct _process {
 
-typedef struct _process{
+  int pid;
+  int ppid;
+  int priority;
+  int status; /* The status can be NEW, READY, RUNNING, BLOCKED OR EXIT. Will have value 0 for processes not yet created */
+  IO ** io; /* Vector of pointers to each IO that the process will execute */
+  int num_io; /* Number of IO's of the process */
+  int time_start; /* Time that the process starts */
+  int time_srvc; /* Total service time of the process */
+  int * time_io; /* Start time of each IO */
+  int time_srvc_count; /* Counter of time already executed of the process */
+  int curr_io_idx; /* If the process is in IO, this variable stores the index of which IO the process is in */
+  int io_return_time; /* Indicates in which time unit the process will return from IO */
+  int time_end; /* Time that the process finished. Used to calculate the turnaround */
 
-int pid;
-int ppid;
-int priority;
-int status; /* The status can be NEW, READY, RUNNING, BLOCKED OR EXIT. Will have value 0 for processes not yet created */
-IO **io; /* Vector of pointers to each IO that the process will execute */
-int num_io; /* Number of IO's of the process */
-int time_start; /* Time that the process starts */
-int time_srvc;/* Total service time of the process */
-int *time_io; /* Start time of each IO */
-int time_srvc_count; /* Counter of time already executed of the process */
-int curr_io_idx;/* If the process is in IO, this variable stores the index of which IO the process is in */
-int io_return_time; /* Indicates in which time unit the process will return from IO */
-int time_end; /* Time that the process finished. Used to calculate the turnaround */
+}
+PROCESS;
 
-} PROCESS;
+typedef struct _queue {
 
-typedef struct _queue{
+  int begin;
+  int end;
+  int size; /* Number of elements in the queue */
+  int * arr; /* Vector of elements of the queue */
+  int arr_size; /* Maximum size of the queue */
 
-int begin;
-int end;
-int size;/* Number of elements in the queue */
-int *arr; /* Vector of elements of the queue */
-int arr_size;/* Maximum size of the queue */
-
-} QUEUE;
+}
+QUEUE;
 #endif

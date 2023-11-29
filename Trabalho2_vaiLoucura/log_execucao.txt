@@ -63,15 +63,6 @@ I/O queue for mag_tape: {  }
 **************************************
 Time 7: 0 processes running
 
-High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: {  }
-I/O queue for Printer: {  }
-I/O queue for mag_tape: {  }
-
-**************************************
-Time 8: 0 processes running
-
 - PID = 100 CREATED - high priority
 - PID = 100 left the high priority queue and was put in execution
 High-priority queue: {  }
@@ -81,7 +72,7 @@ I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 9: PID = 100 running
+Time 8: PID = 100 running
 
 High-priority queue: {  }
 Low-priority queue: {  }
@@ -90,32 +81,44 @@ I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 10: PID = 100 running
+Time 9: PID = 100 running
 
-- PID = 100 suffered an IO interrupt of type printer and was blocked
+- PID = 100 suffered an IO interrupt of type mag_tape and was blocked
 High-priority queue: {  }
 Low-priority queue: {  }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 100 }
-I/O queue for mag_tape: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: { 100 }
+
+**************************************
+Time 10: 0 processes running
+
+High-priority queue: {  }
+Low-priority queue: {  }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: { 100 }
 
 **************************************
 Time 11: 0 processes running
 
+- PID = 101 CREATED - high priority
+- PID = 101 left the high priority queue and was put in execution
 High-priority queue: {  }
 Low-priority queue: {  }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 100 }
-I/O queue for mag_tape: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: { 100 }
 
 **************************************
-Time 12: 0 processes running
+Time 12: PID = 101 running
 
+- PID = 101 suffered an IO interrupt of type mag_tape and was blocked
 High-priority queue: {  }
 Low-priority queue: {  }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 100 }
-I/O queue for mag_tape: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: { 100 - 101 }
 
 **************************************
 Time 13: 0 processes running
@@ -123,744 +126,1350 @@ Time 13: 0 processes running
 High-priority queue: {  }
 Low-priority queue: {  }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 100 }
-I/O queue for mag_tape: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: { 100 - 101 }
 
 **************************************
 Time 14: 0 processes running
 
-- PID = 101 CREATED - high priority
-- PID = 101 left the high priority queue and was put in execution
+- PID = 102 CREATED - high priority
+- PID = 102 left the high priority queue and was put in execution
 High-priority queue: {  }
 Low-priority queue: {  }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 100 }
-I/O queue for mag_tape: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: { 100 - 101 }
 
 **************************************
-Time 15: PID = 101 running
+Time 15: PID = 102 running
 
+- PID = 102 suffered an IO interrupt of type disk and was blocked
 High-priority queue: {  }
 Low-priority queue: {  }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 100 }
-I/O queue for mag_tape: {  }
+I/O queue for Disk: { 102 }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: { 100 - 101 }
 
 **************************************
-Time 16: PID = 101 running
+Time 16: 0 processes running
 
-- PID = 101 finished its execution
 High-priority queue: {  }
 Low-priority queue: {  }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 100 }
-I/O queue for mag_tape: {  }
+I/O queue for Disk: { 102 }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: { 100 - 101 }
 
 **************************************
 Time 17: 0 processes running
 
-- PID = 102 CREATED - high priority
-- PID = 103 CREATED - high priority
-- PID = 102 left the high priority queue and was put in execution
-High-priority queue: { 103 }
-Low-priority queue: {  }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 100 }
-I/O queue for mag_tape: {  }
-
-**************************************
-Time 18: PID = 102 running
-
-- PID = 102 suffered an IO interrupt of type mag_tape and was blocked
-- PID = 103 left the high priority queue and was put in execution
+- PID = 100 returned from an IO of type mag_tape and was put in the high priority queue
+- PID = 100 left the high priority queue and was put in execution
 High-priority queue: {  }
 Low-priority queue: {  }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 100 }
-I/O queue for mag_tape: { 102 }
+I/O queue for Disk: { 102 }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: { 101 }
 
 **************************************
-Time 19: PID = 103 running
+Time 18: PID = 100 running
 
-- PID = 103 suffered an IO interrupt of type disk and was blocked
+- PID = 100 finished its execution
 High-priority queue: {  }
 Low-priority queue: {  }
-I/O queue for Disk: { 103 }
-I/O queue for Printer: { 100 }
-I/O queue for mag_tape: { 102 }
+I/O queue for Disk: { 102 }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: { 101 }
+
+**************************************
+Time 19: 0 processes running
+
+High-priority queue: {  }
+Low-priority queue: {  }
+I/O queue for Disk: { 102 }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: { 101 }
 
 **************************************
 Time 20: 0 processes running
 
+- PID = 102 returned from an IO of type disk and was put in the low priority queue
+- PID = 101 returned from an IO of type mag_tape and was put in the high priority queue
+- PID = 101 left the high priority queue and was put in execution
 High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: { 103 }
-I/O queue for Printer: { 100 }
-I/O queue for mag_tape: { 102 }
-
-**************************************
-Time 21: 0 processes running
-
-High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: { 103 }
-I/O queue for Printer: { 100 }
-I/O queue for mag_tape: { 102 }
-
-**************************************
-Time 22: 0 processes running
-
-- PID = 100 returned from an IO of type printer and was put in the high priority queue
-- PID = 100 left the high priority queue and was put in execution
-High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: { 103 }
+Low-priority queue: { 102 }
+I/O queue for Disk: {  }
 I/O queue for Printer: {  }
-I/O queue for mag_tape: { 102 }
+I/O queue for mag_tape: {  }
 
 **************************************
-Time 23: PID = 100 running
+Time 21: PID = 101 running
 
-- PID = 100 suffered an IO interrupt of type disk and was blocked
 High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: { 103 - 100 }
+Low-priority queue: { 102 }
+I/O queue for Disk: {  }
 I/O queue for Printer: {  }
-I/O queue for mag_tape: { 102 }
+I/O queue for mag_tape: {  }
 
 **************************************
-Time 24: 0 processes running
+Time 22: PID = 101 running
 
-- PID = 103 returned from an IO of type disk and was put in the low priority queue
-- PID = 103 left the low priority queue and was put in execution
 High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: { 100 }
+Low-priority queue: { 102 }
+I/O queue for Disk: {  }
 I/O queue for Printer: {  }
-I/O queue for mag_tape: { 102 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 23: PID = 101 running
+
+- PID = 103 CREATED - high priority
+High-priority queue: { 103 }
+Low-priority queue: { 102 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 24: PID = 101 running
+
+- PID = 101 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 103 left the high priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 102 - 101 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
 
 **************************************
 Time 25: PID = 103 running
 
-- PID = 104 CREATED - high priority
-High-priority queue: { 104 }
-Low-priority queue: {  }
-I/O queue for Disk: { 100 }
+High-priority queue: {  }
+Low-priority queue: { 102 - 101 }
+I/O queue for Disk: {  }
 I/O queue for Printer: {  }
-I/O queue for mag_tape: { 102 }
+I/O queue for mag_tape: {  }
 
 **************************************
 Time 26: PID = 103 running
 
-- PID = 102 returned from an IO of type mag_tape and was put in the high priority queue
-- PID = 103 suffered an IO interrupt of type printer and was blocked
+- PID = 104 CREATED - high priority
+High-priority queue: { 104 }
+Low-priority queue: { 102 - 101 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 27: PID = 103 running
+
+High-priority queue: { 104 }
+Low-priority queue: { 102 - 101 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 28: PID = 103 running
+
+- PID = 103 executed the maximum number of consecutive time units (4) and was put in the low priority queue
 - PID = 104 left the high priority queue and was put in execution
-High-priority queue: { 102 }
-Low-priority queue: {  }
-I/O queue for Disk: { 100 }
-I/O queue for Printer: { 103 }
-I/O queue for mag_tape: {  }
-
-**************************************
-Time 27: PID = 104 running
-
-High-priority queue: { 102 }
-Low-priority queue: {  }
-I/O queue for Disk: { 100 }
-I/O queue for Printer: { 103 }
-I/O queue for mag_tape: {  }
-
-**************************************
-Time 28: PID = 104 running
-
-- PID = 104 finished its execution
-- PID = 100 returned from an IO of type disk and was put in the low priority queue
-- PID = 102 left the high priority queue and was put in execution
 High-priority queue: {  }
-Low-priority queue: { 100 }
+Low-priority queue: { 102 - 101 - 103 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 103 }
+I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 29: PID = 102 running
+Time 29: PID = 104 running
 
 High-priority queue: {  }
-Low-priority queue: { 100 }
+Low-priority queue: { 102 - 101 - 103 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 103 }
+I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 30: PID = 102 running
+Time 30: PID = 104 running
 
 High-priority queue: {  }
-Low-priority queue: { 100 }
+Low-priority queue: { 102 - 101 - 103 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 103 }
+I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 31: PID = 102 running
+Time 31: PID = 104 running
 
-- PID = 102 suffered an IO interrupt of type printer and was blocked
-- PID = 100 left the low priority queue and was put in execution
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 102 - 101 - 103 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 103 - 102 }
+I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 32: PID = 100 running
+Time 32: PID = 104 running
 
+- PID = 104 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 102 left the low priority queue and was put in execution
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 101 - 103 - 104 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 103 - 102 }
+I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 33: PID = 100 running
+Time 33: PID = 102 running
 
-- PID = 100 suffered an IO interrupt of type mag_tape and was blocked
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 101 - 103 - 104 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 103 - 102 }
-I/O queue for mag_tape: { 100 }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
 
 **************************************
-Time 34: 0 processes running
+Time 34: PID = 102 running
 
+High-priority queue: {  }
+Low-priority queue: { 101 - 103 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 35: PID = 102 running
+
+High-priority queue: {  }
+Low-priority queue: { 101 - 103 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 36: PID = 102 running
+
+- PID = 102 finished its execution
 - PID = 105 CREATED - high priority
 - PID = 105 left the high priority queue and was put in execution
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 101 - 103 - 104 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 103 - 102 }
-I/O queue for mag_tape: { 100 }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
 
 **************************************
-Time 35: PID = 105 running
-
-- PID = 105 suffered an IO interrupt of type disk and was blocked
-High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: { 105 }
-I/O queue for Printer: { 103 - 102 }
-I/O queue for mag_tape: { 100 }
-
-**************************************
-Time 36: 0 processes running
+Time 37: PID = 105 running
 
 High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: { 105 }
-I/O queue for Printer: { 103 - 102 }
-I/O queue for mag_tape: { 100 }
+Low-priority queue: { 101 - 103 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
 
 **************************************
-Time 37: 0 processes running
+Time 38: PID = 105 running
 
 High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: { 105 }
-I/O queue for Printer: { 103 - 102 }
-I/O queue for mag_tape: { 100 }
+Low-priority queue: { 101 - 103 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
 
 **************************************
-Time 38: 0 processes running
+Time 39: PID = 105 running
+
+High-priority queue: {  }
+Low-priority queue: { 101 - 103 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 40: PID = 105 running
+
+- PID = 105 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 101 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 103 - 104 - 105 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 41: PID = 101 running
+
+High-priority queue: {  }
+Low-priority queue: { 103 - 104 - 105 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 42: PID = 101 running
+
+High-priority queue: {  }
+Low-priority queue: { 103 - 104 - 105 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 43: PID = 101 running
+
+High-priority queue: {  }
+Low-priority queue: { 103 - 104 - 105 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 44: PID = 101 running
 
 - PID = 106 CREATED - high priority
-- PID = 103 returned from an IO of type printer and was put in the high priority queue
+- PID = 101 executed the maximum number of consecutive time units (4) and was put in the low priority queue
 - PID = 106 left the high priority queue and was put in execution
-High-priority queue: { 103 }
-Low-priority queue: {  }
-I/O queue for Disk: { 105 }
-I/O queue for Printer: { 102 }
-I/O queue for mag_tape: { 100 }
-
-**************************************
-Time 39: PID = 106 running
-
-High-priority queue: { 103 }
-Low-priority queue: {  }
-I/O queue for Disk: { 105 }
-I/O queue for Printer: { 102 }
-I/O queue for mag_tape: { 100 }
-
-**************************************
-Time 40: PID = 106 running
-
-- PID = 105 returned from an IO of type disk and was put in the low priority queue
-High-priority queue: { 103 }
-Low-priority queue: { 105 }
+High-priority queue: {  }
+Low-priority queue: { 103 - 104 - 105 - 101 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 102 }
-I/O queue for mag_tape: { 100 }
-
-**************************************
-Time 41: PID = 106 running
-
-- PID = 100 returned from an IO of type mag_tape and was put in the high priority queue
-High-priority queue: { 103 - 100 }
-Low-priority queue: { 105 }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 102 }
+I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 42: PID = 106 running
+Time 45: PID = 106 running
 
-- PID = 106 executed the maximum number of consecutive time units (4) and was put in the low priority queue
-- PID = 103 left the high priority queue and was put in execution
-High-priority queue: { 100 }
-Low-priority queue: { 105 - 106 }
+High-priority queue: {  }
+Low-priority queue: { 103 - 104 - 105 - 101 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 102 }
+I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 43: PID = 103 running
+Time 46: PID = 106 running
 
-- PID = 102 returned from an IO of type printer and was put in the high priority queue
-- PID = 103 suffered an IO interrupt of type printer and was blocked
-- PID = 100 left the high priority queue and was put in execution
-High-priority queue: { 102 }
-Low-priority queue: { 105 - 106 }
+High-priority queue: {  }
+Low-priority queue: { 103 - 104 - 105 - 101 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 103 }
+I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 44: PID = 100 running
+Time 47: PID = 106 running
 
-High-priority queue: { 102 }
-Low-priority queue: { 105 - 106 }
+High-priority queue: {  }
+Low-priority queue: { 103 - 104 - 105 - 101 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 103 }
+I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 45: PID = 100 running
+Time 48: PID = 106 running
 
-High-priority queue: { 102 }
-Low-priority queue: { 105 - 106 }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 103 }
+- PID = 106 suffered an IO interrupt of type disk and was blocked
+- PID = 103 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 104 - 105 - 101 }
+I/O queue for Disk: { 106 }
+I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 46: PID = 100 running
+Time 49: PID = 103 running
 
-- PID = 100 finished its execution
 - PID = 107 CREATED - high priority
-- PID = 102 left the high priority queue and was put in execution
 High-priority queue: { 107 }
-Low-priority queue: { 105 - 106 }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 103 }
+Low-priority queue: { 104 - 105 - 101 }
+I/O queue for Disk: { 106 }
+I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 47: PID = 102 running
+Time 50: PID = 103 running
 
-- PID = 108 CREATED - high priority
-High-priority queue: { 107 - 108 }
-Low-priority queue: { 105 - 106 }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 103 }
+High-priority queue: { 107 }
+Low-priority queue: { 104 - 105 - 101 }
+I/O queue for Disk: { 106 }
+I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 48: PID = 102 running
+Time 51: PID = 103 running
 
-High-priority queue: { 107 - 108 }
-Low-priority queue: { 105 - 106 }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 103 }
+High-priority queue: { 107 }
+Low-priority queue: { 104 - 105 - 101 }
+I/O queue for Disk: { 106 }
+I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 49: PID = 102 running
+Time 52: PID = 103 running
 
-High-priority queue: { 107 - 108 }
-Low-priority queue: { 105 - 106 }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 103 }
-I/O queue for mag_tape: {  }
-
-**************************************
-Time 50: PID = 102 running
-
-- PID = 109 CREATED - high priority
-- PID = 102 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 103 executed the maximum number of consecutive time units (4) and was put in the low priority queue
 - PID = 107 left the high priority queue and was put in execution
-High-priority queue: { 108 - 109 }
-Low-priority queue: { 105 - 106 - 102 }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 103 }
-I/O queue for mag_tape: {  }
-
-**************************************
-Time 51: PID = 107 running
-
-High-priority queue: { 108 - 109 }
-Low-priority queue: { 105 - 106 - 102 }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 103 }
-I/O queue for mag_tape: {  }
-
-**************************************
-Time 52: PID = 107 running
-
-High-priority queue: { 108 - 109 }
-Low-priority queue: { 105 - 106 - 102 }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 103 }
+High-priority queue: {  }
+Low-priority queue: { 104 - 105 - 101 - 103 }
+I/O queue for Disk: { 106 }
+I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
 Time 53: PID = 107 running
 
-High-priority queue: { 108 - 109 }
-Low-priority queue: { 105 - 106 - 102 }
+- PID = 106 returned from an IO of type disk and was put in the low priority queue
+High-priority queue: {  }
+Low-priority queue: { 104 - 105 - 101 - 103 - 106 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 103 }
+I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
 Time 54: PID = 107 running
 
+High-priority queue: {  }
+Low-priority queue: { 104 - 105 - 101 - 103 - 106 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 55: PID = 107 running
+
+- PID = 108 CREATED - high priority
+High-priority queue: { 108 }
+Low-priority queue: { 104 - 105 - 101 - 103 - 106 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 56: PID = 107 running
+
+- PID = 109 CREATED - high priority
 - PID = 107 executed the maximum number of consecutive time units (4) and was put in the low priority queue
 - PID = 108 left the high priority queue and was put in execution
 High-priority queue: { 109 }
-Low-priority queue: { 105 - 106 - 102 - 107 }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 103 }
-I/O queue for mag_tape: {  }
-
-**************************************
-Time 55: PID = 108 running
-
-- PID = 103 returned from an IO of type printer and was put in the high priority queue
-High-priority queue: { 109 - 103 }
-Low-priority queue: { 105 - 106 - 102 - 107 }
+Low-priority queue: { 104 - 105 - 101 - 103 - 106 - 107 }
 I/O queue for Disk: {  }
 I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 56: PID = 108 running
+Time 57: PID = 108 running
 
-- PID = 108 finished its execution
+High-priority queue: { 109 }
+Low-priority queue: { 104 - 105 - 101 - 103 - 106 - 107 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 58: PID = 108 running
+
+High-priority queue: { 109 }
+Low-priority queue: { 104 - 105 - 101 - 103 - 106 - 107 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 59: PID = 108 running
+
+High-priority queue: { 109 }
+Low-priority queue: { 104 - 105 - 101 - 103 - 106 - 107 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 60: PID = 108 running
+
+- PID = 108 executed the maximum number of consecutive time units (4) and was put in the low priority queue
 - PID = 109 left the high priority queue and was put in execution
-High-priority queue: { 103 }
-Low-priority queue: { 105 - 106 - 102 - 107 }
-I/O queue for Disk: {  }
-I/O queue for Printer: {  }
-I/O queue for mag_tape: {  }
-
-**************************************
-Time 57: PID = 109 running
-
-High-priority queue: { 103 }
-Low-priority queue: { 105 - 106 - 102 - 107 }
-I/O queue for Disk: {  }
-I/O queue for Printer: {  }
-I/O queue for mag_tape: {  }
-
-**************************************
-Time 58: PID = 109 running
-
-High-priority queue: { 103 }
-Low-priority queue: { 105 - 106 - 102 - 107 }
-I/O queue for Disk: {  }
-I/O queue for Printer: {  }
-I/O queue for mag_tape: {  }
-
-**************************************
-Time 59: PID = 109 running
-
-- PID = 109 finished its execution
-- PID = 103 left the high priority queue and was put in execution
 High-priority queue: {  }
-Low-priority queue: { 105 - 106 - 102 - 107 }
+Low-priority queue: { 104 - 105 - 101 - 103 - 106 - 107 - 108 }
 I/O queue for Disk: {  }
 I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 60: PID = 103 running
+Time 61: PID = 109 running
 
 High-priority queue: {  }
-Low-priority queue: { 105 - 106 - 102 - 107 }
+Low-priority queue: { 104 - 105 - 101 - 103 - 106 - 107 - 108 }
 I/O queue for Disk: {  }
 I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 61: PID = 103 running
+Time 62: PID = 109 running
+
+- PID = 109 suffered an IO interrupt of type printer and was blocked
+- PID = 104 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 105 - 101 - 103 - 106 - 107 - 108 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 63: PID = 104 running
 
 High-priority queue: {  }
-Low-priority queue: { 105 - 106 - 102 - 107 }
+Low-priority queue: { 105 - 101 - 103 - 106 - 107 - 108 }
 I/O queue for Disk: {  }
-I/O queue for Printer: {  }
+I/O queue for Printer: { 109 }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 62: PID = 103 running
+Time 64: PID = 104 running
 
 High-priority queue: {  }
-Low-priority queue: { 105 - 106 - 102 - 107 }
+Low-priority queue: { 105 - 101 - 103 - 106 - 107 - 108 }
 I/O queue for Disk: {  }
-I/O queue for Printer: {  }
+I/O queue for Printer: { 109 }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 63: PID = 103 running
+Time 65: PID = 104 running
 
-- PID = 103 finished its execution
+High-priority queue: {  }
+Low-priority queue: { 105 - 101 - 103 - 106 - 107 - 108 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 66: PID = 104 running
+
+- PID = 104 executed the maximum number of consecutive time units (4) and was put in the low priority queue
 - PID = 105 left the low priority queue and was put in execution
 High-priority queue: {  }
-Low-priority queue: { 106 - 102 - 107 }
+Low-priority queue: { 101 - 103 - 106 - 107 - 108 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 67: PID = 105 running
+
+High-priority queue: {  }
+Low-priority queue: { 101 - 103 - 106 - 107 - 108 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 68: PID = 105 running
+
+High-priority queue: {  }
+Low-priority queue: { 101 - 103 - 106 - 107 - 108 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 69: PID = 105 running
+
+High-priority queue: {  }
+Low-priority queue: { 101 - 103 - 106 - 107 - 108 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 70: PID = 105 running
+
+- PID = 105 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 101 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 103 - 106 - 107 - 108 - 104 - 105 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 71: PID = 101 running
+
+High-priority queue: {  }
+Low-priority queue: { 103 - 106 - 107 - 108 - 104 - 105 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 72: PID = 101 running
+
+High-priority queue: {  }
+Low-priority queue: { 103 - 106 - 107 - 108 - 104 - 105 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 73: PID = 101 running
+
+High-priority queue: {  }
+Low-priority queue: { 103 - 106 - 107 - 108 - 104 - 105 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 74: PID = 101 running
+
+- PID = 109 returned from an IO of type printer and was put in the high priority queue
+- PID = 101 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 109 left the high priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 103 - 106 - 107 - 108 - 104 - 105 - 101 }
 I/O queue for Disk: {  }
 I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 64: PID = 105 running
+Time 75: PID = 109 running
 
-- PID = 105 suffered an IO interrupt of type mag_tape and was blocked
+High-priority queue: {  }
+Low-priority queue: { 103 - 106 - 107 - 108 - 104 - 105 - 101 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 76: PID = 109 running
+
+High-priority queue: {  }
+Low-priority queue: { 103 - 106 - 107 - 108 - 104 - 105 - 101 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 77: PID = 109 running
+
+- PID = 109 suffered an IO interrupt of type mag_tape and was blocked
+- PID = 103 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 106 - 107 - 108 - 104 - 105 - 101 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: { 109 }
+
+**************************************
+Time 78: PID = 103 running
+
+High-priority queue: {  }
+Low-priority queue: { 106 - 107 - 108 - 104 - 105 - 101 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: { 109 }
+
+**************************************
+Time 79: PID = 103 running
+
+High-priority queue: {  }
+Low-priority queue: { 106 - 107 - 108 - 104 - 105 - 101 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: { 109 }
+
+**************************************
+Time 80: PID = 103 running
+
+High-priority queue: {  }
+Low-priority queue: { 106 - 107 - 108 - 104 - 105 - 101 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: { 109 }
+
+**************************************
+Time 81: PID = 103 running
+
+- PID = 103 suffered an IO interrupt of type printer and was blocked
 - PID = 106 left the low priority queue and was put in execution
 High-priority queue: {  }
-Low-priority queue: { 102 - 107 }
+Low-priority queue: { 107 - 108 - 104 - 105 - 101 }
 I/O queue for Disk: {  }
-I/O queue for Printer: {  }
-I/O queue for mag_tape: { 105 }
+I/O queue for Printer: { 103 }
+I/O queue for mag_tape: { 109 }
 
 **************************************
-Time 65: PID = 106 running
+Time 82: PID = 106 running
 
 - PID = 106 suffered an IO interrupt of type printer and was blocked
-- PID = 102 left the low priority queue and was put in execution
-High-priority queue: {  }
-Low-priority queue: { 107 }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 106 }
-I/O queue for mag_tape: { 105 }
-
-**************************************
-Time 66: PID = 102 running
-
-- PID = 102 suffered an IO interrupt of type printer and was blocked
 - PID = 107 left the low priority queue and was put in execution
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 108 - 104 - 105 - 101 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 106 - 102 }
-I/O queue for mag_tape: { 105 }
+I/O queue for Printer: { 103 - 106 }
+I/O queue for mag_tape: { 109 }
 
 **************************************
-Time 67: PID = 107 running
+Time 83: PID = 107 running
 
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 108 - 104 - 105 - 101 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 106 - 102 }
-I/O queue for mag_tape: { 105 }
+I/O queue for Printer: { 103 - 106 }
+I/O queue for mag_tape: { 109 }
 
 **************************************
-Time 68: PID = 107 running
+Time 84: PID = 107 running
 
-- PID = 107 suffered an IO interrupt of type disk and was blocked
 High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: { 107 }
-I/O queue for Printer: { 106 - 102 }
-I/O queue for mag_tape: { 105 }
+Low-priority queue: { 108 - 104 - 105 - 101 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 103 - 106 }
+I/O queue for mag_tape: { 109 }
 
 **************************************
-Time 69: 0 processes running
+Time 85: PID = 107 running
 
-High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: { 107 }
-I/O queue for Printer: { 106 - 102 }
-I/O queue for mag_tape: { 105 }
-
-**************************************
-Time 70: 0 processes running
-
-High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: { 107 }
-I/O queue for Printer: { 106 - 102 }
-I/O queue for mag_tape: { 105 }
-
-**************************************
-Time 71: 0 processes running
-
-High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: { 107 }
-I/O queue for Printer: { 106 - 102 }
-I/O queue for mag_tape: { 105 }
-
-**************************************
-Time 72: 0 processes running
-
-- PID = 105 returned from an IO of type mag_tape and was put in the high priority queue
-- PID = 105 left the high priority queue and was put in execution
-High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: { 107 }
-I/O queue for Printer: { 106 - 102 }
+- PID = 109 returned from an IO of type mag_tape and was put in the high priority queue
+High-priority queue: { 109 }
+Low-priority queue: { 108 - 104 - 105 - 101 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 103 - 106 }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 73: PID = 105 running
+Time 86: PID = 107 running
 
-- PID = 107 returned from an IO of type disk and was put in the low priority queue
-- PID = 105 suffered an IO interrupt of type printer and was blocked
-- PID = 107 left the low priority queue and was put in execution
+- PID = 107 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 109 left the high priority queue and was put in execution
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 108 - 104 - 105 - 101 - 107 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 106 - 102 - 105 }
+I/O queue for Printer: { 103 - 106 }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 74: PID = 107 running
+Time 87: PID = 109 running
 
-- PID = 107 finished its execution
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 108 - 104 - 105 - 101 - 107 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 106 - 102 - 105 }
+I/O queue for Printer: { 103 - 106 }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 75: 0 processes running
+Time 88: PID = 109 running
 
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 108 - 104 - 105 - 101 - 107 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 106 - 102 - 105 }
+I/O queue for Printer: { 103 - 106 }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 76: 0 processes running
+Time 89: PID = 109 running
 
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 108 - 104 - 105 - 101 - 107 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 106 - 102 - 105 }
+I/O queue for Printer: { 103 - 106 }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 77: 0 processes running
+Time 90: PID = 109 running
 
+- PID = 109 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 108 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 104 - 105 - 101 - 107 - 109 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 103 - 106 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 91: PID = 108 running
+
+High-priority queue: {  }
+Low-priority queue: { 104 - 105 - 101 - 107 - 109 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 103 - 106 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 92: PID = 108 running
+
+High-priority queue: {  }
+Low-priority queue: { 104 - 105 - 101 - 107 - 109 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 103 - 106 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 93: PID = 108 running
+
+- PID = 103 returned from an IO of type printer and was put in the high priority queue
+- PID = 108 suffered an IO interrupt of type printer and was blocked
+- PID = 103 left the high priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 104 - 105 - 101 - 107 - 109 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 106 - 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 94: PID = 103 running
+
+- PID = 103 finished its execution
 - PID = 106 returned from an IO of type printer and was put in the high priority queue
 - PID = 106 left the high priority queue and was put in execution
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 104 - 105 - 101 - 107 - 109 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 102 - 105 }
+I/O queue for Printer: { 108 }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 78: PID = 106 running
-
-- PID = 102 returned from an IO of type printer and was put in the high priority queue
-High-priority queue: { 102 }
-Low-priority queue: {  }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 105 }
-I/O queue for mag_tape: {  }
-
-**************************************
-Time 79: PID = 106 running
-
-High-priority queue: { 102 }
-Low-priority queue: {  }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 105 }
-I/O queue for mag_tape: {  }
-
-**************************************
-Time 80: PID = 106 running
-
-- PID = 106 finished its execution
-- PID = 102 left the high priority queue and was put in execution
-High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 105 }
-I/O queue for mag_tape: {  }
-
-**************************************
-Time 81: PID = 102 running
-
-- PID = 102 finished its execution
-High-priority queue: {  }
-Low-priority queue: {  }
-I/O queue for Disk: {  }
-I/O queue for Printer: { 105 }
-I/O queue for mag_tape: {  }
-
-**************************************
-Time 82: 0 processes running
+Time 95: PID = 106 running
 
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 104 - 105 - 101 - 107 - 109 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 105 }
+I/O queue for Printer: { 108 }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 83: 0 processes running
+Time 96: PID = 106 running
 
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 104 - 105 - 101 - 107 - 109 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 105 }
+I/O queue for Printer: { 108 }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 84: 0 processes running
+Time 97: PID = 106 running
 
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 104 - 105 - 101 - 107 - 109 }
 I/O queue for Disk: {  }
-I/O queue for Printer: { 105 }
+I/O queue for Printer: { 108 }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 85: 0 processes running
+Time 98: PID = 106 running
 
-- PID = 105 returned from an IO of type printer and was put in the high priority queue
-- PID = 105 left the high priority queue and was put in execution
+- PID = 106 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 104 left the low priority queue and was put in execution
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 105 - 101 - 107 - 109 - 106 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 99: PID = 104 running
+
+High-priority queue: {  }
+Low-priority queue: { 105 - 101 - 107 - 109 - 106 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 100: PID = 104 running
+
+High-priority queue: {  }
+Low-priority queue: { 105 - 101 - 107 - 109 - 106 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 101: PID = 104 running
+
+High-priority queue: {  }
+Low-priority queue: { 105 - 101 - 107 - 109 - 106 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 102: PID = 104 running
+
+- PID = 104 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 105 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 101 - 107 - 109 - 106 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 103: PID = 105 running
+
+High-priority queue: {  }
+Low-priority queue: { 101 - 107 - 109 - 106 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 104: PID = 105 running
+
+High-priority queue: {  }
+Low-priority queue: { 101 - 107 - 109 - 106 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 105: PID = 105 running
+
+- PID = 108 returned from an IO of type printer and was put in the high priority queue
+High-priority queue: { 108 }
+Low-priority queue: { 101 - 107 - 109 - 106 - 104 }
 I/O queue for Disk: {  }
 I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 86: PID = 105 running
+Time 106: PID = 105 running
 
+- PID = 105 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 108 left the high priority queue and was put in execution
 High-priority queue: {  }
-Low-priority queue: {  }
+Low-priority queue: { 101 - 107 - 109 - 106 - 104 - 105 }
 I/O queue for Disk: {  }
 I/O queue for Printer: {  }
 I/O queue for mag_tape: {  }
 
 **************************************
-Time 87: PID = 105 running
+Time 107: PID = 108 running
+
+High-priority queue: {  }
+Low-priority queue: { 101 - 107 - 109 - 106 - 104 - 105 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 108: PID = 108 running
+
+High-priority queue: {  }
+Low-priority queue: { 101 - 107 - 109 - 106 - 104 - 105 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 109: PID = 108 running
+
+High-priority queue: {  }
+Low-priority queue: { 101 - 107 - 109 - 106 - 104 - 105 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 110: PID = 108 running
+
+- PID = 108 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 101 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 107 - 109 - 106 - 104 - 105 - 108 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 111: PID = 101 running
+
+High-priority queue: {  }
+Low-priority queue: { 107 - 109 - 106 - 104 - 105 - 108 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 112: PID = 101 running
+
+High-priority queue: {  }
+Low-priority queue: { 107 - 109 - 106 - 104 - 105 - 108 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 113: PID = 101 running
+
+High-priority queue: {  }
+Low-priority queue: { 107 - 109 - 106 - 104 - 105 - 108 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 114: PID = 101 running
+
+- PID = 101 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 107 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 109 - 106 - 104 - 105 - 108 - 101 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 115: PID = 107 running
+
+High-priority queue: {  }
+Low-priority queue: { 109 - 106 - 104 - 105 - 108 - 101 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 116: PID = 107 running
+
+High-priority queue: {  }
+Low-priority queue: { 109 - 106 - 104 - 105 - 108 - 101 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 117: PID = 107 running
+
+High-priority queue: {  }
+Low-priority queue: { 109 - 106 - 104 - 105 - 108 - 101 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 118: PID = 107 running
+
+- PID = 107 suffered an IO interrupt of type disk and was blocked
+- PID = 109 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 106 - 104 - 105 - 108 - 101 }
+I/O queue for Disk: { 107 }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 119: PID = 109 running
+
+- PID = 109 suffered an IO interrupt of type printer and was blocked
+- PID = 106 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 104 - 105 - 108 - 101 }
+I/O queue for Disk: { 107 }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 120: PID = 106 running
+
+- PID = 106 suffered an IO interrupt of type mag_tape and was blocked
+- PID = 104 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 105 - 108 - 101 }
+I/O queue for Disk: { 107 }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: { 106 }
+
+**************************************
+Time 121: PID = 104 running
+
+High-priority queue: {  }
+Low-priority queue: { 105 - 108 - 101 }
+I/O queue for Disk: { 107 }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: { 106 }
+
+**************************************
+Time 122: PID = 104 running
+
+High-priority queue: {  }
+Low-priority queue: { 105 - 108 - 101 }
+I/O queue for Disk: { 107 }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: { 106 }
+
+**************************************
+Time 123: PID = 104 running
+
+- PID = 107 returned from an IO of type disk and was put in the low priority queue
+High-priority queue: {  }
+Low-priority queue: { 105 - 108 - 101 - 107 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: { 106 }
+
+**************************************
+Time 124: PID = 104 running
+
+- PID = 104 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 105 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 108 - 101 - 107 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: { 106 }
+
+**************************************
+Time 125: PID = 105 running
+
+High-priority queue: {  }
+Low-priority queue: { 108 - 101 - 107 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: { 106 }
+
+**************************************
+Time 126: PID = 105 running
+
+High-priority queue: {  }
+Low-priority queue: { 108 - 101 - 107 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: { 106 }
+
+**************************************
+Time 127: PID = 105 running
+
+High-priority queue: {  }
+Low-priority queue: { 108 - 101 - 107 - 104 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: { 106 }
+
+**************************************
+Time 128: PID = 105 running
+
+- PID = 106 returned from an IO of type mag_tape and was put in the high priority queue
+- PID = 105 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 106 left the high priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 108 - 101 - 107 - 104 - 105 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 129: PID = 106 running
+
+High-priority queue: {  }
+Low-priority queue: { 108 - 101 - 107 - 104 - 105 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 130: PID = 106 running
+
+High-priority queue: {  }
+Low-priority queue: { 108 - 101 - 107 - 104 - 105 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 109 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 131: PID = 106 running
+
+- PID = 109 returned from an IO of type printer and was put in the high priority queue
+High-priority queue: { 109 }
+Low-priority queue: { 108 - 101 - 107 - 104 - 105 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 132: PID = 106 running
+
+- PID = 106 executed the maximum number of consecutive time units (4) and was put in the low priority queue
+- PID = 109 left the high priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 108 - 101 - 107 - 104 - 105 - 106 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 133: PID = 109 running
+
+- PID = 109 finished its execution
+- PID = 108 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 101 - 107 - 104 - 105 - 106 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 134: PID = 108 running
+
+High-priority queue: {  }
+Low-priority queue: { 101 - 107 - 104 - 105 - 106 }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 135: PID = 108 running
+
+- PID = 108 suffered an IO interrupt of type printer and was blocked
+- PID = 101 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 107 - 104 - 105 - 106 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 136: PID = 101 running
+
+- PID = 101 finished its execution
+- PID = 107 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 104 - 105 - 106 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 137: PID = 107 running
+
+- PID = 107 finished its execution
+- PID = 104 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 105 - 106 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 138: PID = 104 running
+
+High-priority queue: {  }
+Low-priority queue: { 105 - 106 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 139: PID = 104 running
+
+- PID = 104 finished its execution
+- PID = 105 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: { 106 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 140: PID = 105 running
+
+High-priority queue: {  }
+Low-priority queue: { 106 }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 141: PID = 105 running
 
 - PID = 105 finished its execution
+- PID = 106 left the low priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: {  }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 142: PID = 106 running
+
+- PID = 106 finished its execution
+High-priority queue: {  }
+Low-priority queue: {  }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 143: 0 processes running
+
+High-priority queue: {  }
+Low-priority queue: {  }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 144: 0 processes running
+
+High-priority queue: {  }
+Low-priority queue: {  }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 145: 0 processes running
+
+High-priority queue: {  }
+Low-priority queue: {  }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 146: 0 processes running
+
+High-priority queue: {  }
+Low-priority queue: {  }
+I/O queue for Disk: {  }
+I/O queue for Printer: { 108 }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 147: 0 processes running
+
+- PID = 108 returned from an IO of type printer and was put in the high priority queue
+- PID = 108 left the high priority queue and was put in execution
+High-priority queue: {  }
+Low-priority queue: {  }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 148: PID = 108 running
+
+High-priority queue: {  }
+Low-priority queue: {  }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 149: PID = 108 running
+
+High-priority queue: {  }
+Low-priority queue: {  }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 150: PID = 108 running
+
+High-priority queue: {  }
+Low-priority queue: {  }
+I/O queue for Disk: {  }
+I/O queue for Printer: {  }
+I/O queue for mag_tape: {  }
+
+**************************************
+Time 151: PID = 108 running
+
+- PID = 108 finished its execution
 High-priority queue: {  }
 Low-priority queue: {  }
 I/O queue for Disk: {  }
