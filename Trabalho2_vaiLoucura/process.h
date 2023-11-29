@@ -122,7 +122,7 @@ void print_val() {
 
   FILE * file_val = fopen("log_init_val.txt", "w");
 
-  printf("\nLogs de inicialização das variáveis iniciais:\n");
+  printf("\nLogs de inicialização das variáveis iniciais:\n\n");
 
   for (i = 0; i < NUM_PROC; i++) {
 
