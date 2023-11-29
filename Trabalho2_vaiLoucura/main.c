@@ -180,11 +180,7 @@ int main() {
   fclose(file_execucao);
   fclose(file_turnarounds);
 
-  printf("Simulacao finalizada\n");
-  printf("Verifique os arquivos de log para conferir os resultados:\n");
-  printf("- log_execucao.txt\n");
-  printf("- log_init_val.txt\n");
-  printf("- log_turnarounds.txt\n");
+  printf("End Simulation\n");
 
   return 0;
 }
