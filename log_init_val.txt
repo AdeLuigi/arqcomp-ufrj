@@ -1,0 +1,78 @@
+Processo PID: 100 
+PPID: 1 
+Prioridade: 2 
+Tempo Inicio: 10 
+Tempo Servico: 20 
+--------------
+Processo PID: 101 
+PPID: 1 
+Prioridade: 1 
+Tempo Inicio: 18 
+Tempo Servico: 2 
+--------------
+Processo PID: 102 
+PPID: 1 
+Prioridade: 1 
+Tempo Inicio: 20 
+Tempo Servico: 19 
+Tipo IO: mag_tape 
+Tempo de inicio do IO: 18 
+Tipo IO: printer 
+Tempo de inicio do IO: 12 
+Tipo IO: mag_tape 
+Tempo de inicio do IO: 13 
+--------------
+Processo PID: 103 
+PPID: 1 
+Prioridade: 1 
+Tempo Inicio: 27 
+Tempo Servico: 2 
+--------------
+Processo PID: 104 
+PPID: 1 
+Prioridade: 2 
+Tempo Inicio: 33 
+Tempo Servico: 2 
+--------------
+Processo PID: 105 
+PPID: 1 
+Prioridade: 0 
+Tempo Inicio: 38 
+Tempo Servico: 17 
+--------------
+Processo PID: 106 
+PPID: 1 
+Prioridade: 1 
+Tempo Inicio: 42 
+Tempo Servico: 13 
+Tipo IO: mag_tape 
+Tempo de inicio do IO: 2 
+Tipo IO: disk 
+Tempo de inicio do IO: 6 
+Tipo IO: disk 
+Tempo de inicio do IO: 12 
+--------------
+Processo PID: 107 
+PPID: 1 
+Prioridade: 0 
+Tempo Inicio: 45 
+Tempo Servico: 2 
+--------------
+Processo PID: 108 
+PPID: 1 
+Prioridade: 0 
+Tempo Inicio: 48 
+Tempo Servico: 3 
+Tipo IO: disk 
+Tempo de inicio do IO: 2 
+--------------
+Processo PID: 109 
+PPID: 1 
+Prioridade: 1 
+Tempo Inicio: 55 
+Tempo Servico: 5 
+Tipo IO: printer 
+Tempo de inicio do IO: 4 
+Tipo IO: printer 
+Tempo de inicio do IO: 2 
+--------------
