@@ -42,8 +42,6 @@ int main() {
   init();
   print_val();
 
-  //FILE * file_execucao = fopen("log_execucao.txt", "w");
-
   int scal_proc = 0; /* Number of processes that have already been scheduled */
   int time_unit = 0; /* Counter variable that informs which time unit is being executed */
   int exec_pid = -1; /* PID of the process that is currently running */
@@ -54,13 +52,10 @@ int main() {
 
   /* Main loop */
   while (!finished()) {
-    //fprintf(file_execucao, "Time %d: ", time_unit);
     printf("Time %d: ", time_unit);
     if (exec_pid == -1)
-      //fprintf(file_execucao, "0 processes running\n\n");
       printf("0 processes running\n\n");
     else
-      //fprintf(file_execucao, "PID = %d running\n\n", exec_pid);
       printf("PID = %d running\n\n", exec_pid);
 
     /* Counts the execution time of the current process and checks if it has finished its execution */
@@ -69,7 +64,6 @@ int main() {
       same_proc_count++;
       list_proc[idx].time_srvc_count++;
       if (list_proc[idx].time_srvc_count == list_proc[idx].time_srvc) {
-        //fprintf(file_execucao, "- PID = %d finished its execution\n", exec_pid);
         printf("- PID = %d finished its execution\n", exec_pid);
         list_proc[idx].time_end = time_unit;
         list_proc[idx].status = EXIT;
@@ -80,7 +74,6 @@ int main() {
     /* Puts in the queue the processes that start at this time unit */
     while (scal_proc < NUM_PROC && list_proc[scal_proc].time_start == time_unit) {
       list_proc[scal_proc].status = NEW;
-      //fprintf(file_execucao, "- PID = %d CREATED - high priority\n", list_proc[scal_proc].pid);
       printf("- PID = %d CREATED - high priority\n", list_proc[scal_proc].pid);
       list_proc[scal_proc].status = READY;
       queue_push( & queue_high_priot, list_proc[scal_proc].pid);
@@ -99,11 +92,9 @@ int main() {
           queue_pop( & queue_io[i]);
           IO curr_io = * list_proc[idx].io[list_proc[idx].curr_io_idx];
           if (curr_io.queue_priority == HIGH_PRIOT) {
-            //fprintf(file_execucao, "- PID = %d returned from an IO of type %s and was put in the high priority queue\n", list_proc[idx].pid, curr_io.type);
             printf("- PID = %d returned from an IO of type %s and was put in the high priority queue\n", list_proc[idx].pid, curr_io.type);
             queue_push( & queue_high_priot, list_proc[idx].pid);
           } else {
-            //fprintf(file_execucao, "- PID = %d returned from an IO of type %s and was put in the low priority queue\n", list_proc[idx].pid, curr_io.type);
             printf("- PID = %d returned from an IO of type %s and was put in the low priority queue\n", list_proc[idx].pid, curr_io.type);
             queue_push( & queue_low_priot, list_proc[idx].pid);
           }
@@ -127,7 +118,6 @@ int main() {
             queue_push( & queue_io[MAG_TAPE], exec_pid);
 
           /* Blocks the process, sets the time when it will return and which IO it is doing */
-          //fprintf(file_execucao, "- PID = %d suffered an IO interrupt of type %s and was blocked\n", exec_pid, list_proc[idx].io[i] -> type);
           printf("- PID = %d suffered an IO interrupt of type %s and was blocked\n", exec_pid, list_proc[idx].io[i]->type);
           list_proc[idx].curr_io_idx = i;
           list_proc[idx].io_return_time = time_unit + list_proc[idx].io[i] -> time_exec;
@@ -140,7 +130,6 @@ int main() {
 
     /* Preemption to not exceed the time slice */
     if (exec_pid != -1 && same_proc_count == TIMESLICE) {
-      //fprintf(file_execucao, "- PID = %d executed the maximum number of consecutive time units (%d) and was put in the low priority queue\n", exec_pid, TIMESLICE);
       printf("- PID = %d executed the maximum number of consecutive time units (%d) and was put in the low priority queue\n", exec_pid, TIMESLICE);
       queue_push( & queue_low_priot, exec_pid);
       exec_pid = -1;
@@ -152,7 +141,6 @@ int main() {
       /* Search for a process in the high priority queue */
       exec_pid = queue_pop( & queue_high_priot);
       if (exec_pid != -1) {
-        //fprintf(file_execucao, "- PID = %d left the high priority queue and was put in execution\n", exec_pid);
         printf("- PID = %d left the high priority queue and was put in execution\n", exec_pid);
         list_proc[pid_to_idx(exec_pid)].status = RUNNING;
       }
@@ -160,7 +148,6 @@ int main() {
       else {
         exec_pid = queue_pop( & queue_low_priot);
         if (exec_pid != -1) {
-          //fprintf(file_execucao, "- PID = %d left the low priority queue and was put in execution\n", exec_pid);
           printf("- PID = %d left the low priority queue and was put in execution\n", exec_pid);
           list_proc[pid_to_idx(exec_pid)].status = RUNNING;
         }
@@ -168,23 +155,18 @@ int main() {
     }
 
     /* Prints the queues */
-    //fprintf(file_execucao, "High-priority queue: ");
     printf("High-priority queue: ");
     print_queue( & queue_high_priot, stdout);
 
-    //fprintf(file_execucao, "Low-priority queue: ");
     printf("Low-priority queue: ");
     print_queue( & queue_low_priot, stdout);
 
-    //fprintf(file_execucao, "I/O queue for Disk: ");
     printf("I/O queue for Disk: ");
     print_queue( & queue_io[DISK], stdout);
 
-    //fprintf(file_execucao, "I/O queue for Printer: ");
     printf("I/O queue for Printer: ");
     print_queue( & queue_io[PRINTER], stdout);
 
-    //fprintf(file_execucao, "I/O queue for mag_tape: ");
     printf("I/O queue for mag_tape: ");
     print_queue( & queue_io[MAG_TAPE], stdout);
 
@@ -193,17 +175,10 @@ int main() {
     time_unit++;
   }
 
-  //FILE * file_turnarounds = fopen("log_turnarounds.txt", "w");
-
-
-  //fprintf(file_turnarounds, "Turnarounds:\n");
   printf("Turnarounds:\n\n");
   for (i = 0; i < NUM_PROC; i++) {
     printf("Process %d: %d\n\n", i + 100, list_proc[i].time_end - list_proc[i].time_start);
   }
-
-  //fclose(file_execucao);
-  //fclose(file_turnarounds);
 
   printf("End Simulation\n");
 
