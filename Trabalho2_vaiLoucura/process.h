@@ -37,7 +37,7 @@ void initialize_process(){
 	list_proc = (PROCESS *)malloc(NUM_PROC*sizeof(PROCESS));
 
 	if(!list_proc){
-		printf("Erro ao alocar memoria para lista de processos\n");
+		printf("Erro na alocação de memória\n");
 		exit(1);
 	}
 
@@ -68,14 +68,14 @@ void initialize_process(){
 		/* Aloca memoria para a lista de IOs do processo */
 		list_proc[i].io = (IO **)malloc(list_proc[i].num_io * sizeof(IO *));
 		if(!list_proc[i].io){
-			printf("Erro ao alocar memoria para lista de IO do processo: %d\n",i);
+			printf("Erro na alocação de memória - IO do processo: %d\n",i);
 			exit(1);
 		}
 
 		/* Aloca memoria para a lista dos tempos de inicio de cada IO do processo */
 		list_proc[i].time_io = (int*)malloc(list_proc[i].num_io * sizeof(int));
 		if(!list_proc[i].time_io){
-			printf("Erro ao alocar memoria para lista de tempo de inicio de IO do processo: %d\n",i);
+			printf("Erro na alocação de memória de tempo de inicio de IO do processo: %d\n",i);
 			exit(1);
 		}
 

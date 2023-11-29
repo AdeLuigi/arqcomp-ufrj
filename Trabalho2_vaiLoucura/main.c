@@ -3,7 +3,7 @@ Nome: Lucas Tatsuya Tanaka
 DRE:1180058149
 
 Nome: Ademario Vitor Costa de Santana
-DRE:
+DRE:118143148
 
 Nome: Felipe de Jesus Araujo da Conceição
 DRE:
@@ -46,11 +46,11 @@ int main() {
 
 	/* Loop principal */
 	while(!finished()) {
-		fprintf(file_execucao, "Tempo %d: ", time_unit);
+		fprintf(file_execucao, "Time %d: ", time_unit);
 		if(exec_pid == -1)
-			fprintf(file_execucao, "Nenhum processo esta em execucao\n\n");
+			fprintf(file_execucao, "0 processes running\n\n");
 		else
-			fprintf(file_execucao, "O processo de pid = %d esta em execucao\n\n", exec_pid);
+			fprintf(file_execucao, "PID = %d em execucao\n\n", exec_pid);
 
 		/* Contabiliza o tempo de execucao do processo atual e verifica se ele terminou sua execucao */
 		if(exec_pid != -1) {
@@ -58,7 +58,7 @@ int main() {
 			same_proc_count++;
 			list_proc[idx].time_srvc_count++;
 			if(list_proc[idx].time_srvc_count == list_proc[idx].time_srvc) {
-				fprintf(file_execucao, "- Processo de pid = %d terminou sua execucao\n", exec_pid);
+				fprintf(file_execucao, "- PID = %d terminou sua execucao\n", exec_pid);
 				list_proc[idx].time_end = time_unit;
 				list_proc[idx].status = EXIT;
 				exec_pid = -1;
@@ -68,7 +68,7 @@ int main() {
 		/* Coloca na fila os processos que iniciarem nesta unidade de tempo */
 		while(scal_proc < NUM_PROC && list_proc[scal_proc].time_start == time_unit) {
 			list_proc[scal_proc].status = NEW;
-			fprintf(file_execucao, "- Processo de pid = %d foi criado agora e foi colocado na fila de alta prioridade\n", list_proc[scal_proc].pid);
+			fprintf(file_execucao, "- PID = %d CRIADO - alta prioridade\n", list_proc[scal_proc].pid);
 			list_proc[scal_proc].status = READY;
 			queue_push(&queue_high_priot, list_proc[scal_proc].pid);
 			scal_proc++;
@@ -86,11 +86,11 @@ int main() {
 					queue_pop(&queue_io[i]);
 					IO curr_io = *list_proc[idx].io[list_proc[idx].curr_io_idx];
 					if(curr_io.queue_priority == HIGH_PRIOT) {
-						fprintf(file_execucao, "- Processo de pid = %d voltou de um IO do tipo %s e foi colocado na fila de alta prioridade\n", list_proc[idx].pid, curr_io.type);
+						fprintf(file_execucao, "- PID = %d voltou de um IO do tipo %s e foi colocado na fila de alta prioridade\n", list_proc[idx].pid, curr_io.type);
 						queue_push(&queue_high_priot, list_proc[idx].pid);
 					}
 					else {
-						fprintf(file_execucao, "- Processo de pid = %d voltou de um IO do tipo %s e foi colocado na fila de baixa prioridade\n", list_proc[idx].pid, curr_io.type);
+						fprintf(file_execucao, "- PID = %d voltou de um IO do tipo %s e foi colocado na fila de baixa prioridade\n", list_proc[idx].pid, curr_io.type);
 						queue_push(&queue_low_priot, list_proc[idx].pid);
 					}
 					list_proc[idx].status = READY;
@@ -113,7 +113,7 @@ int main() {
 						queue_push(&queue_io[MAG_TAPE], exec_pid);
 
 					/* Bloqueia o processo, define o tempo em que o ele retornara e qual IO ele esta fazendo */
-					fprintf(file_execucao, "- Processo de pid = %d sofreu uma interrupcao de IO do tipo %s e foi bloqueado\n", exec_pid, list_proc[idx].io[i]->type);
+					fprintf(file_execucao, "- PID = %d sofreu uma interrupcao de IO do tipo %s e foi bloqueado\n", exec_pid, list_proc[idx].io[i]->type);
 					list_proc[idx].curr_io_idx = i;
 					list_proc[idx].io_return_time = time_unit + list_proc[idx].io[i]->time_exec;
 					list_proc[idx].status = BLOCKED;
@@ -125,7 +125,7 @@ int main() {
 
 		/* Preempcao para nao exceder o time slice */
 		if(exec_pid != -1 && same_proc_count == TIMESLICE) {
-			fprintf(file_execucao, "- Processo de pid = %d executou o maximo de unidades de tempo seguidas (%d) e foi colocado na fila de baixa prioridade\n", exec_pid, TIMESLICE);
+			fprintf(file_execucao, "- PID = %d executou o maximo de unidades de tempo seguidas (%d) e foi colocado na fila de baixa prioridade\n", exec_pid, TIMESLICE);
 			queue_push(&queue_low_priot, exec_pid);
 			exec_pid = -1;
 		}
@@ -136,29 +136,29 @@ int main() {
 			/* Busca um processo na fila de alta prioridade */
 			exec_pid = queue_pop(&queue_high_priot);
 			if(exec_pid != -1) {
-				fprintf(file_execucao, "- Processo de pid = %d saiu da fila de alta prioridade e foi colocado em execucao\n", exec_pid);
+				fprintf(file_execucao, "- PID = %d saiu da fila de alta prioridade e foi colocado em execucao\n", exec_pid);
 				list_proc[pid_to_idx(exec_pid)].status = RUNNING;
 			}
 			/* Se a fila de alta prioridade estiver vazia, busca um processo na fila de baixa prioridade */
 			else {
 				exec_pid = queue_pop(&queue_low_priot);
 				if(exec_pid != -1) {
-					fprintf(file_execucao, "- Processo de pid = %d saiu da fila de baixa prioridade e foi colocado em execucao\n", exec_pid);
+					fprintf(file_execucao, "- PID = %d saiu da fila de baixa prioridade e foi colocado em execucao\n", exec_pid);
 					list_proc[pid_to_idx(exec_pid)].status = RUNNING;
 				}
 			}
 		}
 
 		/* Imprime as filas */
-		fprintf(file_execucao, "Fila de alta prioridade:     ");
+		fprintf(file_execucao, "High-priority queue:     ");
 		print_queue(&queue_high_priot, file_execucao);
-		fprintf(file_execucao, "Fila de baixa prioridade:    ");
+		fprintf(file_execucao, "Low-priority queue:    ");
 		print_queue(&queue_low_priot, file_execucao);
-		fprintf(file_execucao, "Fila de IO do tipo disk:     ");
+		fprintf(file_execucao, "I/O queue for Disk:     ");
 		print_queue(&queue_io[DISK], file_execucao);
-		fprintf(file_execucao, "Fila de IO do tipo printer:  ");
+		fprintf(file_execucao, "I/O queue for Printer:  ");
 		print_queue(&queue_io[PRINTER], file_execucao);
-		fprintf(file_execucao, "Fila de IO do tipo mag_tape: ");
+		fprintf(file_execucao, "I/O queue for mag_tape: ");
 		print_queue(&queue_io[MAG_TAPE], file_execucao);
 
 		fprintf(file_execucao, "\n-----------------------------------------------\n");

@@ -438,15 +438,15 @@ int main() {
 		}
 
 		/* Imprime as filas */
-		fprintf(file_execucao, "Fila de alta prioridade:     ");
+		fprintf(file_execucao, "High-priority queue:     ");
 		print_queue(&queue_high_priot, file_execucao);
-		fprintf(file_execucao, "Fila de baixa prioridade:    ");
+		fprintf(file_execucao, "Low-priority queue:    ");
 		print_queue(&queue_low_priot, file_execucao);
-		fprintf(file_execucao, "Fila de IO do tipo disk:     ");
+		fprintf(file_execucao, "I/O queue for Disk:     ");
 		print_queue(&queue_io[DISK], file_execucao);
-		fprintf(file_execucao, "Fila de IO do tipo printer:  ");
+		fprintf(file_execucao, "I/O queue for Printer:  ");
 		print_queue(&queue_io[PRINTER], file_execucao);
-		fprintf(file_execucao, "Fila de IO do tipo mag_tape: ");
+		fprintf(file_execucao, "I/O queue for mag_tape: ");
 		print_queue(&queue_io[MAG_TAPE], file_execucao);
 
 		fprintf(file_execucao, "\n-----------------------------------------------\n");

@@ -19,19 +19,19 @@ void initialize_queue() {
 	queue_high_priot.arr = (int *) malloc(NUM_PROC * sizeof(int));
   int i;
 	if(!queue_high_priot.arr){
-		printf("Erro ao alocar memoria para a fila de alta prioridade\n");
+		printf("Erro na alocação de memória - fila de alta prioridade\n");
 		exit(1);
 	}
 
 	queue_low_priot.arr = (int *) malloc(NUM_PROC * sizeof(int));
 	if(!queue_low_priot.arr){
-		printf("Erro ao alocar memoria para a fila de baixa prioridade\n");
+		printf("Erro na alocação de memória -  fila de baixa prioridade\n");
 		exit(1);
 	}
 	for( i = 0; i < NUM_IO; i++) {
 		queue_io[i].arr = (int *) malloc(NUM_PROC * sizeof(int));
 		if(!queue_io[i].arr) {
-			printf("Erro ao alocar memoria para a fila de processos do IO\n");
+			printf("Erro na alocação de memória - fila de processos IO\n");
 			exit(1);
 		}
 		queue_io[i].begin = 0;
