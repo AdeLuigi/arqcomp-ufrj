@@ -1,11 +1,11 @@
 Turnarounds:
-Process 100: 21
-Process 101: 76
-Process 102: 4
-Process 103: 76
-Process 104: 79
-Process 105: 61
-Process 106: 2
-Process 107: 2
-Process 108: 76
-Process 109: 59
+Process 100: 94
+Process 101: 40
+Process 102: 108
+Process 103: 100
+Process 104: 71
+Process 105: 72
+Process 106: 47
+Process 107: 5
+Process 108: 61
+Process 109: 49

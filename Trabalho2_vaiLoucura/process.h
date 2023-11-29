@@ -137,11 +137,10 @@ void print_val() {
       printf("IO start time: %d \n", list_proc[i].time_io[j]);
 
     }
-    printf("*******************\n");
+    printf("*******************\n\n");
 
   }
 
-  fclose(file_val);
 }
 
 /* Function that informs if all processes have already finished */
