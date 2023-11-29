@@ -1,0 +1,985 @@
+Tempo 0: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 1: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 2: Nenhum processo esta em execucao
+
+- Processo de pid = 100 foi criado agora e foi colocado na fila de alta prioridade
+- Processo de pid = 100 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 3: O processo de pid = 100 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 4: O processo de pid = 100 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 5: O processo de pid = 100 esta em execucao
+
+- Processo de pid = 101 foi criado agora e foi colocado na fila de alta prioridade
+Fila de alta prioridade:     [ 101 ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 6: O processo de pid = 100 esta em execucao
+
+- Processo de pid = 100 executou o maximo de unidades de tempo seguidas (4) e foi colocado na fila de baixa prioridade
+- Processo de pid = 101 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 100 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 7: O processo de pid = 101 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 100 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 8: O processo de pid = 101 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 100 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 9: O processo de pid = 101 esta em execucao
+
+- Processo de pid = 101 terminou sua execucao
+- Processo de pid = 100 saiu da fila de baixa prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 10: O processo de pid = 100 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 11: O processo de pid = 100 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 12: O processo de pid = 100 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 13: O processo de pid = 100 esta em execucao
+
+- Processo de pid = 102 foi criado agora e foi colocado na fila de alta prioridade
+- Processo de pid = 100 sofreu uma interrupcao de IO do tipo disk e foi bloqueado
+- Processo de pid = 102 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [ 100 ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 14: O processo de pid = 102 esta em execucao
+
+- Processo de pid = 102 sofreu uma interrupcao de IO do tipo disk e foi bloqueado
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [ 100 | 102 ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 15: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [ 100 | 102 ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 16: Nenhum processo esta em execucao
+
+- Processo de pid = 103 foi criado agora e foi colocado na fila de alta prioridade
+- Processo de pid = 103 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [ 100 | 102 ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 17: O processo de pid = 103 esta em execucao
+
+- Processo de pid = 103 sofreu uma interrupcao de IO do tipo mag_tape e foi bloqueado
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [ 100 | 102 ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 103 ]
+
+-----------------------------------------------
+Tempo 18: Nenhum processo esta em execucao
+
+- Processo de pid = 100 voltou de um IO do tipo disk e foi colocado na fila de baixa prioridade
+- Processo de pid = 100 saiu da fila de baixa prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [ 102 ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 103 ]
+
+-----------------------------------------------
+Tempo 19: O processo de pid = 100 esta em execucao
+
+- Processo de pid = 102 voltou de um IO do tipo disk e foi colocado na fila de baixa prioridade
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 102 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 103 ]
+
+-----------------------------------------------
+Tempo 20: O processo de pid = 100 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 102 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 103 ]
+
+-----------------------------------------------
+Tempo 21: O processo de pid = 100 esta em execucao
+
+- Processo de pid = 100 terminou sua execucao
+- Processo de pid = 102 saiu da fila de baixa prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 103 ]
+
+-----------------------------------------------
+Tempo 22: O processo de pid = 102 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 103 ]
+
+-----------------------------------------------
+Tempo 23: O processo de pid = 102 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 103 ]
+
+-----------------------------------------------
+Tempo 24: O processo de pid = 102 esta em execucao
+
+- Processo de pid = 104 foi criado agora e foi colocado na fila de alta prioridade
+Fila de alta prioridade:     [ 104 ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 103 ]
+
+-----------------------------------------------
+Tempo 25: O processo de pid = 102 esta em execucao
+
+- Processo de pid = 103 voltou de um IO do tipo mag_tape e foi colocado na fila de alta prioridade
+- Processo de pid = 102 sofreu uma interrupcao de IO do tipo mag_tape e foi bloqueado
+- Processo de pid = 104 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [ 103 ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 102 ]
+
+-----------------------------------------------
+Tempo 26: O processo de pid = 104 esta em execucao
+
+Fila de alta prioridade:     [ 103 ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 102 ]
+
+-----------------------------------------------
+Tempo 27: O processo de pid = 104 esta em execucao
+
+- Processo de pid = 104 terminou sua execucao
+- Processo de pid = 103 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 102 ]
+
+-----------------------------------------------
+Tempo 28: O processo de pid = 103 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 102 ]
+
+-----------------------------------------------
+Tempo 29: O processo de pid = 103 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 102 ]
+
+-----------------------------------------------
+Tempo 30: O processo de pid = 103 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 102 ]
+
+-----------------------------------------------
+Tempo 31: O processo de pid = 103 esta em execucao
+
+- Processo de pid = 103 executou o maximo de unidades de tempo seguidas (4) e foi colocado na fila de baixa prioridade
+- Processo de pid = 103 saiu da fila de baixa prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 102 ]
+
+-----------------------------------------------
+Tempo 32: O processo de pid = 103 esta em execucao
+
+- Processo de pid = 103 sofreu uma interrupcao de IO do tipo printer e foi bloqueado
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 103 ]
+Fila de IO do tipo mag_tape: [ 102 ]
+
+-----------------------------------------------
+Tempo 33: Nenhum processo esta em execucao
+
+- Processo de pid = 102 voltou de um IO do tipo mag_tape e foi colocado na fila de alta prioridade
+- Processo de pid = 102 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 103 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 34: O processo de pid = 102 esta em execucao
+
+- Processo de pid = 105 foi criado agora e foi colocado na fila de alta prioridade
+Fila de alta prioridade:     [ 105 ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 103 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 35: O processo de pid = 102 esta em execucao
+
+Fila de alta prioridade:     [ 105 ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 103 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 36: O processo de pid = 102 esta em execucao
+
+- Processo de pid = 102 terminou sua execucao
+- Processo de pid = 105 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 103 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 37: O processo de pid = 105 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 103 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 38: O processo de pid = 105 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 103 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 39: O processo de pid = 105 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 103 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 40: O processo de pid = 105 esta em execucao
+
+- Processo de pid = 106 foi criado agora e foi colocado na fila de alta prioridade
+- Processo de pid = 105 executou o maximo de unidades de tempo seguidas (4) e foi colocado na fila de baixa prioridade
+- Processo de pid = 106 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 105 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 103 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 41: O processo de pid = 106 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 105 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 103 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 42: O processo de pid = 106 esta em execucao
+
+- Processo de pid = 106 terminou sua execucao
+- Processo de pid = 107 foi criado agora e foi colocado na fila de alta prioridade
+- Processo de pid = 107 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 105 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 103 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 43: O processo de pid = 107 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 105 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 103 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 44: O processo de pid = 107 esta em execucao
+
+- Processo de pid = 103 voltou de um IO do tipo printer e foi colocado na fila de alta prioridade
+Fila de alta prioridade:     [ 103 ]
+Fila de baixa prioridade:    [ 105 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 45: O processo de pid = 107 esta em execucao
+
+- Processo de pid = 107 sofreu uma interrupcao de IO do tipo mag_tape e foi bloqueado
+- Processo de pid = 103 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 105 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 107 ]
+
+-----------------------------------------------
+Tempo 46: O processo de pid = 103 esta em execucao
+
+- Processo de pid = 103 sofreu uma interrupcao de IO do tipo mag_tape e foi bloqueado
+- Processo de pid = 105 saiu da fila de baixa prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 107 | 103 ]
+
+-----------------------------------------------
+Tempo 47: O processo de pid = 105 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 107 | 103 ]
+
+-----------------------------------------------
+Tempo 48: O processo de pid = 105 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 107 | 103 ]
+
+-----------------------------------------------
+Tempo 49: O processo de pid = 105 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 107 | 103 ]
+
+-----------------------------------------------
+Tempo 50: O processo de pid = 105 esta em execucao
+
+- Processo de pid = 105 executou o maximo de unidades de tempo seguidas (4) e foi colocado na fila de baixa prioridade
+- Processo de pid = 105 saiu da fila de baixa prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 107 | 103 ]
+
+-----------------------------------------------
+Tempo 51: O processo de pid = 105 esta em execucao
+
+- Processo de pid = 105 terminou sua execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 107 | 103 ]
+
+-----------------------------------------------
+Tempo 52: Nenhum processo esta em execucao
+
+- Processo de pid = 108 foi criado agora e foi colocado na fila de alta prioridade
+- Processo de pid = 108 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 107 | 103 ]
+
+-----------------------------------------------
+Tempo 53: O processo de pid = 108 esta em execucao
+
+- Processo de pid = 109 foi criado agora e foi colocado na fila de alta prioridade
+- Processo de pid = 107 voltou de um IO do tipo mag_tape e foi colocado na fila de alta prioridade
+Fila de alta prioridade:     [ 109 | 107 ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 103 ]
+
+-----------------------------------------------
+Tempo 54: O processo de pid = 108 esta em execucao
+
+- Processo de pid = 108 terminou sua execucao
+- Processo de pid = 103 voltou de um IO do tipo mag_tape e foi colocado na fila de alta prioridade
+- Processo de pid = 109 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [ 107 | 103 ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 55: O processo de pid = 109 esta em execucao
+
+Fila de alta prioridade:     [ 107 | 103 ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 56: O processo de pid = 109 esta em execucao
+
+Fila de alta prioridade:     [ 107 | 103 ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 57: O processo de pid = 109 esta em execucao
+
+Fila de alta prioridade:     [ 107 | 103 ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 58: O processo de pid = 109 esta em execucao
+
+- Processo de pid = 109 sofreu uma interrupcao de IO do tipo printer e foi bloqueado
+- Processo de pid = 107 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [ 103 ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 109 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 59: O processo de pid = 107 esta em execucao
+
+Fila de alta prioridade:     [ 103 ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 109 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 60: O processo de pid = 107 esta em execucao
+
+- Processo de pid = 107 sofreu uma interrupcao de IO do tipo printer e foi bloqueado
+- Processo de pid = 103 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 109 | 107 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 61: O processo de pid = 103 esta em execucao
+
+- Processo de pid = 103 terminou sua execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 109 | 107 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 62: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 109 | 107 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 63: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 109 | 107 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 64: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 109 | 107 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 65: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 109 | 107 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 66: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 109 | 107 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 67: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 109 | 107 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 68: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 109 | 107 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 69: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 109 | 107 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 70: Nenhum processo esta em execucao
+
+- Processo de pid = 109 voltou de um IO do tipo printer e foi colocado na fila de alta prioridade
+- Processo de pid = 109 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 107 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 71: O processo de pid = 109 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [ 107 ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 72: O processo de pid = 109 esta em execucao
+
+- Processo de pid = 107 voltou de um IO do tipo printer e foi colocado na fila de alta prioridade
+Fila de alta prioridade:     [ 107 ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 73: O processo de pid = 109 esta em execucao
+
+Fila de alta prioridade:     [ 107 ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 74: O processo de pid = 109 esta em execucao
+
+- Processo de pid = 109 executou o maximo de unidades de tempo seguidas (4) e foi colocado na fila de baixa prioridade
+- Processo de pid = 107 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 109 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 75: O processo de pid = 107 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 109 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 76: O processo de pid = 107 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 109 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 77: O processo de pid = 107 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 109 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 78: O processo de pid = 107 esta em execucao
+
+- Processo de pid = 107 executou o maximo de unidades de tempo seguidas (4) e foi colocado na fila de baixa prioridade
+- Processo de pid = 109 saiu da fila de baixa prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 107 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 79: O processo de pid = 109 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 107 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 80: O processo de pid = 109 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 107 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 81: O processo de pid = 109 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 107 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 82: O processo de pid = 109 esta em execucao
+
+- Processo de pid = 109 executou o maximo de unidades de tempo seguidas (4) e foi colocado na fila de baixa prioridade
+- Processo de pid = 107 saiu da fila de baixa prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 109 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 83: O processo de pid = 107 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 109 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 84: O processo de pid = 107 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 109 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 85: O processo de pid = 107 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [ 109 ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 86: O processo de pid = 107 esta em execucao
+
+- Processo de pid = 107 terminou sua execucao
+- Processo de pid = 109 saiu da fila de baixa prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 87: O processo de pid = 109 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 88: O processo de pid = 109 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 89: O processo de pid = 109 esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 90: O processo de pid = 109 esta em execucao
+
+- Processo de pid = 109 executou o maximo de unidades de tempo seguidas (4) e foi colocado na fila de baixa prioridade
+- Processo de pid = 109 saiu da fila de baixa prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 91: O processo de pid = 109 esta em execucao
+
+- Processo de pid = 109 sofreu uma interrupcao de IO do tipo mag_tape e foi bloqueado
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 109 ]
+
+-----------------------------------------------
+Tempo 92: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 109 ]
+
+-----------------------------------------------
+Tempo 93: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 109 ]
+
+-----------------------------------------------
+Tempo 94: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 109 ]
+
+-----------------------------------------------
+Tempo 95: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 109 ]
+
+-----------------------------------------------
+Tempo 96: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 109 ]
+
+-----------------------------------------------
+Tempo 97: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 109 ]
+
+-----------------------------------------------
+Tempo 98: Nenhum processo esta em execucao
+
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [ 109 ]
+
+-----------------------------------------------
+Tempo 99: Nenhum processo esta em execucao
+
+- Processo de pid = 109 voltou de um IO do tipo mag_tape e foi colocado na fila de alta prioridade
+- Processo de pid = 109 saiu da fila de alta prioridade e foi colocado em execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
+Tempo 100: O processo de pid = 109 esta em execucao
+
+- Processo de pid = 109 terminou sua execucao
+Fila de alta prioridade:     [  ]
+Fila de baixa prioridade:    [  ]
+Fila de IO do tipo disk:     [  ]
+Fila de IO do tipo printer:  [  ]
+Fila de IO do tipo mag_tape: [  ]
+
+-----------------------------------------------
