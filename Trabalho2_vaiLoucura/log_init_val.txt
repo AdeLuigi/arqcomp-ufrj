@@ -1,86 +1,10 @@
-Process PID: 100 
-PPID: 1 
-Priority: 2 
-Start Time: 7 
-Service Time: 3 
-IO Type: mag_tape 
-IO start time: 2 
 *******************
-Process PID: 101 
-PPID: 1 
-Priority: 2 
-Start Time: 11 
-Service Time: 18 
-IO Type: mag_tape 
-IO start time: 1 
 *******************
-Process PID: 102 
-PPID: 1 
-Priority: 2 
-Start Time: 14 
-Service Time: 5 
-IO Type: disk 
-IO start time: 1 
 *******************
-Process PID: 103 
-PPID: 1 
-Priority: 1 
-Start Time: 23 
-Service Time: 13 
-IO Type: printer 
-IO start time: 12 
 *******************
-Process PID: 104 
-PPID: 1 
-Priority: 0 
-Start Time: 26 
-Service Time: 18 
 *******************
-Process PID: 105 
-PPID: 1 
-Priority: 0 
-Start Time: 36 
-Service Time: 18 
 *******************
-Process PID: 106 
-PPID: 1 
-Priority: 2 
-Start Time: 44 
-Service Time: 15 
-IO Type: printer 
-IO start time: 5 
-IO Type: disk 
-IO start time: 4 
-IO Type: mag_tape 
-IO start time: 10 
 *******************
-Process PID: 107 
-PPID: 1 
-Priority: 1 
-Start Time: 49 
-Service Time: 13 
-IO Type: disk 
-IO start time: 12 
 *******************
-Process PID: 108 
-PPID: 1 
-Priority: 2 
-Start Time: 55 
-Service Time: 17 
-IO Type: printer 
-IO start time: 7 
-IO Type: printer 
-IO start time: 13 
 *******************
-Process PID: 109 
-PPID: 1 
-Priority: 1 
-Start Time: 56 
-Service Time: 11 
-IO Type: printer 
-IO start time: 10 
-IO Type: printer 
-IO start time: 2 
-IO Type: mag_tape 
-IO start time: 5 
 *******************

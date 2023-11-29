@@ -122,18 +122,34 @@ void print_val() {
 
   FILE * file_val = fopen("log_init_val.txt", "w");
 
+  printf("\nLogs de inicialização das variáveis iniciais:\n");
+
   for (i = 0; i < NUM_PROC; i++) {
 
+    printf("Process PID: %d \n", list_proc[i].pid);
+    printf("PPID: %d \n", list_proc[i].ppid);
+    printf("Priority: %d \n", list_proc[i].priority);
+    printf("Start Time: %d \n", list_proc[i].time_start);
+    printf("Service Time: %d \n", list_proc[i].time_srvc);
+
+    /*
     fprintf(file_val, "Process PID: %d \n", list_proc[i].pid);
     fprintf(file_val, "PPID: %d \n", list_proc[i].ppid);
     fprintf(file_val, "Priority: %d \n", list_proc[i].priority);
     fprintf(file_val, "Start Time: %d \n", list_proc[i].time_start);
     fprintf(file_val, "Service Time: %d \n", list_proc[i].time_srvc);
+    */
 
     int tam_io = list_proc[i].num_io;
     for (j = 0; j < tam_io; j++) {
+
+      /*
       fprintf(file_val, "IO Type: %s \n", list_proc[i].io[j] -> type);
       fprintf(file_val, "IO start time: %d \n", list_proc[i].time_io[j]);
+      */
+
+      printf("IO Type: %s \n", list_proc[i].io[j]->type);
+      printf("IO start time: %d \n", list_proc[i].time_io[j]);
 
     }
     fprintf(file_val, "*******************\n");
