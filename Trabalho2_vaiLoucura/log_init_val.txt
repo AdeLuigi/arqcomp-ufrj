@@ -1,78 +1,94 @@
-Processo PID: 100 
+Process PID: 100 
 PPID: 1 
-Prioridade: 0 
-Tempo Inicio: 9 
-Tempo Servico: 20 
-Tipo IO: mag_tape 
-Tempo de inicio do IO: 5 
-Tipo IO: mag_tape 
-Tempo de inicio do IO: 11 
-Tipo IO: printer 
-Tempo de inicio do IO: 6 
+Priority: 1 
+Start Time: 5 
+Service Time: 7 
+IO Type: mag_tape 
+IO start time: 1 
+IO Type: mag_tape 
+IO start time: 2 
 --------------
-Processo PID: 101 
+Process PID: 101 
 PPID: 1 
-Prioridade: 1 
-Tempo Inicio: 13 
-Tempo Servico: 2 
+Priority: 1 
+Start Time: 5 
+Service Time: 13 
+IO Type: printer 
+IO start time: 12 
 --------------
-Processo PID: 102 
+Process PID: 102 
 PPID: 1 
-Prioridade: 1 
-Tempo Inicio: 14 
-Tempo Servico: 3 
-Tipo IO: printer 
-Tempo de inicio do IO: 2 
+Priority: 2 
+Start Time: 10 
+Service Time: 2 
 --------------
-Processo PID: 103 
+Process PID: 103 
 PPID: 1 
-Prioridade: 0 
-Tempo Inicio: 23 
-Tempo Servico: 20 
+Priority: 1 
+Start Time: 20 
+Service Time: 14 
+IO Type: printer 
+IO start time: 13 
+IO Type: disk 
+IO start time: 7 
+IO Type: disk 
+IO start time: 6 
 --------------
-Processo PID: 104 
+Process PID: 104 
 PPID: 1 
-Prioridade: 2 
-Tempo Inicio: 29 
-Tempo Servico: 2 
+Priority: 2 
+Start Time: 23 
+Service Time: 8 
+IO Type: printer 
+IO start time: 5 
+IO Type: printer 
+IO start time: 1 
+IO Type: mag_tape 
+IO start time: 2 
 --------------
-Processo PID: 105 
+Process PID: 105 
 PPID: 1 
-Prioridade: 1 
-Tempo Inicio: 34 
-Tempo Servico: 2 
+Priority: 1 
+Start Time: 23 
+Service Time: 3 
+IO Type: printer 
+IO start time: 2 
 --------------
-Processo PID: 106 
+Process PID: 106 
 PPID: 1 
-Prioridade: 2 
-Tempo Inicio: 35 
-Tempo Servico: 2 
+Priority: 1 
+Start Time: 26 
+Service Time: 7 
+IO Type: mag_tape 
+IO start time: 2 
+IO Type: mag_tape 
+IO start time: 3 
+IO Type: printer 
+IO start time: 4 
 --------------
-Processo PID: 107 
+Process PID: 107 
 PPID: 1 
-Prioridade: 1 
-Tempo Inicio: 39 
-Tempo Servico: 5 
-Tipo IO: mag_tape 
-Tempo de inicio do IO: 2 
-Tipo IO: printer 
-Tempo de inicio do IO: 4 
+Priority: 2 
+Start Time: 30 
+Service Time: 7 
+IO Type: printer 
+IO start time: 1 
+IO Type: printer 
+IO start time: 2 
+IO Type: printer 
+IO start time: 6 
 --------------
-Processo PID: 108 
+Process PID: 108 
 PPID: 1 
-Prioridade: 2 
-Tempo Inicio: 42 
-Tempo Servico: 9 
-Tipo IO: mag_tape 
-Tempo de inicio do IO: 8 
-Tipo IO: disk 
-Tempo de inicio do IO: 2 
+Priority: 0 
+Start Time: 34 
+Service Time: 7 
 --------------
-Processo PID: 109 
+Process PID: 109 
 PPID: 1 
-Prioridade: 2 
-Tempo Inicio: 49 
-Tempo Servico: 19 
-Tipo IO: mag_tape 
-Tempo de inicio do IO: 3 
+Priority: 2 
+Start Time: 37 
+Service Time: 7 
+IO Type: disk 
+IO start time: 6 
 --------------
